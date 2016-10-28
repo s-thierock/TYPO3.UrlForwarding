@@ -232,7 +232,7 @@ class Redirect
      */
     protected function constructUrlForPath($scheme, $host, $oldPath)
     {
-        $needle = '/'.preg_quote($this->path, '/').'/';
+        $needle = '/'.preg_quote(trim($this->path, '/'), '/').'/';
 
         $newPath = preg_replace($needle, trim($this->forwardUrl, '/'), $oldPath, 1);
 
