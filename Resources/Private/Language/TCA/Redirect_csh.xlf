@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-11-30T17:35:37Z" product-name="url_forwarding">
+		<header/>
+		<body>
+      <trans-unit id="additional_params.description">
+      	<source><![CDATA[For example: &utm_source=old-domain.com&utm_medium=301]]></source>
+      </trans-unit>
+		</body>
+	</file>
+</xliff>

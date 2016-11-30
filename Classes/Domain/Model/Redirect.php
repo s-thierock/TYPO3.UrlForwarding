@@ -56,6 +56,13 @@ class Redirect
     protected $forwardUrl;
 
     /**
+     * Additional params for the URL
+     *
+     * @var string
+     */
+    protected $additionalParams;
+
+    /**
      * The scheme
      *
      * @var string
@@ -110,6 +117,7 @@ class Redirect
      * @param int $languageUid The language uid
      * @param int $type The type of redirect
      * @param string $forwardUrl The URL to be forwarded
+     * @param string $additionalParams Additional params for the URL
      * @param int $internalPage Uid of the internal page
      * @param string $externalUrl External URL
      * @param string $internalFile Path to the internal file
@@ -120,6 +128,7 @@ class Redirect
         $languageUid,
         $type,
         $forwardUrl,
+        $additionalParams,
         $internalPage,
         $externalUrl,
         $internalFile,
@@ -129,6 +138,7 @@ class Redirect
         $this->languageUid = (int) $languageUid;
         $this->type = (int) $type;
         $this->forwardUrl = (string) $forwardUrl;
+        $this->additionalParams = (string) $additionalParams;
         $this->internalPage = (int) $internalPage;
         $this->externalUrl = (string) $externalUrl;
         $this->internalFile = (string) $internalFile;
@@ -198,7 +208,7 @@ class Redirect
             [
                 'parameter' => $this->internalPage,
                 'forceAbsoluteUrl' => true,
-                'additionalParams' => '&L=' . $this->languageUid
+                'additionalParams' => '&L=' . $this->languageUid . $this->additionalParams
             ]
         );
     }

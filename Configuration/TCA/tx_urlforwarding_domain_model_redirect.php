@@ -38,6 +38,7 @@ return [
             hidden,
             type,
             forward_url,
+            additional_params,
             internal_page,
             external_url,
             internal_file,
@@ -57,6 +58,7 @@ return [
                 --palette--;;general,
                 forward_url,
                 internal_page,
+                additional_params,
                 http_status,
                 domain,
             --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
@@ -303,6 +305,15 @@ return [
                         ]
                     ]
                 ]
+            ]
+        ],
+        'additional_params' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:url_forwarding/Resources/Private/Language/TCA/Redirect.xlf:additional_params',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
             ]
         ],
         'external_url' => [
