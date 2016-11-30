@@ -48,9 +48,6 @@
 			<trans-unit id="additional_params">
       	<source>Additional Params</source>
       </trans-unit>
-      <trans-unit id="additional_params.description">
-      	<source>For example: &utm_source=old_Domain&utm_medium=301</source>
-      </trans-unit>
 			<trans-unit id="forward_url.3">
 				<source>New path</source>
 			</trans-unit>
